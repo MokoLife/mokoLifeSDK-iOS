@@ -1,0 +1,27 @@
+PODS:
+  - CocoaAsyncSocket (7.6.3)
+  - MQTTClient (0.15.0):
+    - MQTTClient/Core (= 0.15.0)
+  - MQTTClient/Core (0.15.0):
+    - MQTTClient/Manager
+    - MQTTClient/Min
+  - MQTTClient/Manager (0.15.0):
+    - MQTTClient/Min
+  - MQTTClient/Min (0.15.0)
+
+DEPENDENCIES:
+  - CocoaAsyncSocket
+  - MQTTClient
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CocoaAsyncSocket
+    - MQTTClient
+
+SPEC CHECKSUMS:
+  CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
+  MQTTClient: 8f68f0c22014110e964413a137b15e569aa7786f
+
+PODFILE CHECKSUM: f381dd2bff51f55a385a00a1a909d34e071850bd
+
+COCOAPODS: 1.6.0.beta.1

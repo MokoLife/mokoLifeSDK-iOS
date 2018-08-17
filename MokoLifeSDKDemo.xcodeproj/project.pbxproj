@@ -8,24 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		00C304D72126B78100D822D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C304D62126B78100D822D7 /* AppDelegate.m */; };
-		00C304DA2126B78100D822D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C304D92126B78100D822D7 /* ViewController.m */; };
-		00C304DD2126B78100D822D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00C304DB2126B78100D822D7 /* Main.storyboard */; };
 		00C304DF2126B78100D822D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00C304DE2126B78100D822D7 /* Assets.xcassets */; };
-		00C304E22126B78100D822D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00C304E02126B78100D822D7 /* LaunchScreen.storyboard */; };
 		00C304E52126B78100D822D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C304E42126B78100D822D7 /* main.m */; };
+		00C305012126B7B600D822D7 /* MKSocketAdopter.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C304EE2126B7B600D822D7 /* MKSocketAdopter.m */; };
+		00C305022126B7B600D822D7 /* MKSocketBlockAdopter.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C304F02126B7B600D822D7 /* MKSocketBlockAdopter.m */; };
+		00C305032126B7B600D822D7 /* MKSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C304F22126B7B600D822D7 /* MKSocketManager.m */; };
+		00C305042126B7B600D822D7 /* MKSocketTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C304F52126B7B600D822D7 /* MKSocketTaskOperation.m */; };
+		00C305052126B7B600D822D7 /* MKMQTTServerBlockAdopter.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C304F92126B7B600D822D7 /* MKMQTTServerBlockAdopter.m */; };
+		00C305062126B7B600D822D7 /* MKMQTTServerDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C304FC2126B7B600D822D7 /* MKMQTTServerDataParser.m */; };
+		00C305072126B7B600D822D7 /* MKMQTTServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C304FE2126B7B600D822D7 /* MKMQTTServerManager.m */; };
+		00C305082126B7B600D822D7 /* MKMQTTServerTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C305002126B7B600D822D7 /* MKMQTTServerTaskOperation.m */; };
+		EAD3B29DE6E4F81A827595FF /* libPods-MokoLifeSDKDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271F2503626E35D4995289 /* libPods-MokoLifeSDKDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		00C304D22126B78100D822D7 /* MokoLifeSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MokoLifeSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00C304D52126B78100D822D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		00C304D62126B78100D822D7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		00C304D82126B78100D822D7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		00C304D92126B78100D822D7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		00C304DC2126B78100D822D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		00C304DE2126B78100D822D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		00C304E12126B78100D822D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00C304E32126B78100D822D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00C304E42126B78100D822D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		00C304ED2126B7B600D822D7 /* MKSocketAdopter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSocketAdopter.h; sourceTree = "<group>"; };
+		00C304EE2126B7B600D822D7 /* MKSocketAdopter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSocketAdopter.m; sourceTree = "<group>"; };
+		00C304EF2126B7B600D822D7 /* MKSocketBlockAdopter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSocketBlockAdopter.h; sourceTree = "<group>"; };
+		00C304F02126B7B600D822D7 /* MKSocketBlockAdopter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSocketBlockAdopter.m; sourceTree = "<group>"; };
+		00C304F12126B7B600D822D7 /* MKSocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSocketManager.h; sourceTree = "<group>"; };
+		00C304F22126B7B600D822D7 /* MKSocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSocketManager.m; sourceTree = "<group>"; };
+		00C304F32126B7B600D822D7 /* MKSocketTaskDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSocketTaskDefine.h; sourceTree = "<group>"; };
+		00C304F42126B7B600D822D7 /* MKSocketTaskOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSocketTaskOperation.h; sourceTree = "<group>"; };
+		00C304F52126B7B600D822D7 /* MKSocketTaskOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSocketTaskOperation.m; sourceTree = "<group>"; };
+		00C304F72126B7B600D822D7 /* MKMQTTServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMQTTServer.h; sourceTree = "<group>"; };
+		00C304F82126B7B600D822D7 /* MKMQTTServerBlockAdopter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMQTTServerBlockAdopter.h; sourceTree = "<group>"; };
+		00C304F92126B7B600D822D7 /* MKMQTTServerBlockAdopter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMQTTServerBlockAdopter.m; sourceTree = "<group>"; };
+		00C304FA2126B7B600D822D7 /* MKMQTTServerDataNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMQTTServerDataNotifications.h; sourceTree = "<group>"; };
+		00C304FB2126B7B600D822D7 /* MKMQTTServerDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMQTTServerDataParser.h; sourceTree = "<group>"; };
+		00C304FC2126B7B600D822D7 /* MKMQTTServerDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMQTTServerDataParser.m; sourceTree = "<group>"; };
+		00C304FD2126B7B600D822D7 /* MKMQTTServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMQTTServerManager.h; sourceTree = "<group>"; };
+		00C304FE2126B7B600D822D7 /* MKMQTTServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMQTTServerManager.m; sourceTree = "<group>"; };
+		00C304FF2126B7B600D822D7 /* MKMQTTServerTaskOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMQTTServerTaskOperation.h; sourceTree = "<group>"; };
+		00C305002126B7B600D822D7 /* MKMQTTServerTaskOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMQTTServerTaskOperation.m; sourceTree = "<group>"; };
+		5EC41C4980F38C064C04762E /* Pods-MokoLifeSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MokoLifeSDKDemo.release.xcconfig"; path = "Target Support Files/Pods-MokoLifeSDKDemo/Pods-MokoLifeSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
+		A2C13861CEC6C05163A2615A /* Pods-MokoLifeSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MokoLifeSDKDemo.debug.xcconfig"; path = "Target Support Files/Pods-MokoLifeSDKDemo/Pods-MokoLifeSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		AA271F2503626E35D4995289 /* libPods-MokoLifeSDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MokoLifeSDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAD3B29DE6E4F81A827595FF /* libPods-MokoLifeSDKDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,8 +67,11 @@
 		00C304C92126B78000D822D7 = {
 			isa = PBXGroup;
 			children = (
+				00C304EB2126B7B600D822D7 /* SDK */,
 				00C304D42126B78100D822D7 /* MokoLifeSDKDemo */,
 				00C304D32126B78100D822D7 /* Products */,
+				6F10F94BAE2C1CF0D51D9923 /* Pods */,
+				F819F7E52949DBB287B7B34F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,15 +88,71 @@
 			children = (
 				00C304D52126B78100D822D7 /* AppDelegate.h */,
 				00C304D62126B78100D822D7 /* AppDelegate.m */,
-				00C304D82126B78100D822D7 /* ViewController.h */,
-				00C304D92126B78100D822D7 /* ViewController.m */,
-				00C304DB2126B78100D822D7 /* Main.storyboard */,
 				00C304DE2126B78100D822D7 /* Assets.xcassets */,
-				00C304E02126B78100D822D7 /* LaunchScreen.storyboard */,
 				00C304E32126B78100D822D7 /* Info.plist */,
 				00C304E42126B78100D822D7 /* main.m */,
 			);
 			path = MokoLifeSDKDemo;
+			sourceTree = "<group>";
+		};
+		00C304EB2126B7B600D822D7 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				00C304EC2126B7B600D822D7 /* MKSDKForDevice */,
+				00C304F62126B7B600D822D7 /* MKSDKForMqttServer */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		00C304EC2126B7B600D822D7 /* MKSDKForDevice */ = {
+			isa = PBXGroup;
+			children = (
+				00C304ED2126B7B600D822D7 /* MKSocketAdopter.h */,
+				00C304EE2126B7B600D822D7 /* MKSocketAdopter.m */,
+				00C304EF2126B7B600D822D7 /* MKSocketBlockAdopter.h */,
+				00C304F02126B7B600D822D7 /* MKSocketBlockAdopter.m */,
+				00C304F12126B7B600D822D7 /* MKSocketManager.h */,
+				00C304F22126B7B600D822D7 /* MKSocketManager.m */,
+				00C304F32126B7B600D822D7 /* MKSocketTaskDefine.h */,
+				00C304F42126B7B600D822D7 /* MKSocketTaskOperation.h */,
+				00C304F52126B7B600D822D7 /* MKSocketTaskOperation.m */,
+			);
+			path = MKSDKForDevice;
+			sourceTree = "<group>";
+		};
+		00C304F62126B7B600D822D7 /* MKSDKForMqttServer */ = {
+			isa = PBXGroup;
+			children = (
+				00C304F72126B7B600D822D7 /* MKMQTTServer.h */,
+				00C304F82126B7B600D822D7 /* MKMQTTServerBlockAdopter.h */,
+				00C304F92126B7B600D822D7 /* MKMQTTServerBlockAdopter.m */,
+				00C304FA2126B7B600D822D7 /* MKMQTTServerDataNotifications.h */,
+				00C304FB2126B7B600D822D7 /* MKMQTTServerDataParser.h */,
+				00C304FC2126B7B600D822D7 /* MKMQTTServerDataParser.m */,
+				00C304FD2126B7B600D822D7 /* MKMQTTServerManager.h */,
+				00C304FE2126B7B600D822D7 /* MKMQTTServerManager.m */,
+				00C304FF2126B7B600D822D7 /* MKMQTTServerTaskOperation.h */,
+				00C305002126B7B600D822D7 /* MKMQTTServerTaskOperation.m */,
+			);
+			path = MKSDKForMqttServer;
+			sourceTree = "<group>";
+		};
+		6F10F94BAE2C1CF0D51D9923 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2C13861CEC6C05163A2615A /* Pods-MokoLifeSDKDemo.debug.xcconfig */,
+				5EC41C4980F38C064C04762E /* Pods-MokoLifeSDKDemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F819F7E52949DBB287B7B34F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA271F2503626E35D4995289 /* libPods-MokoLifeSDKDemo.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +162,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00C304E82126B78100D822D7 /* Build configuration list for PBXNativeTarget "MokoLifeSDKDemo" */;
 			buildPhases = (
+				F0327237FF2BC28E3C449C1B /* [CP] Check Pods Manifest.lock */,
 				00C304CE2126B78000D822D7 /* Sources */,
 				00C304CF2126B78000D822D7 /* Frameworks */,
 				00C304D02126B78000D822D7 /* Resources */,
@@ -129,45 +214,56 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00C304E22126B78100D822D7 /* LaunchScreen.storyboard in Resources */,
 				00C304DF2126B78100D822D7 /* Assets.xcassets in Resources */,
-				00C304DD2126B78100D822D7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F0327237FF2BC28E3C449C1B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MokoLifeSDKDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		00C304CE2126B78000D822D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00C304DA2126B78100D822D7 /* ViewController.m in Sources */,
+				00C305052126B7B600D822D7 /* MKMQTTServerBlockAdopter.m in Sources */,
+				00C305022126B7B600D822D7 /* MKSocketBlockAdopter.m in Sources */,
 				00C304E52126B78100D822D7 /* main.m in Sources */,
+				00C305012126B7B600D822D7 /* MKSocketAdopter.m in Sources */,
+				00C305042126B7B600D822D7 /* MKSocketTaskOperation.m in Sources */,
+				00C305032126B7B600D822D7 /* MKSocketManager.m in Sources */,
+				00C305072126B7B600D822D7 /* MKMQTTServerManager.m in Sources */,
+				00C305082126B7B600D822D7 /* MKMQTTServerTaskOperation.m in Sources */,
 				00C304D72126B78100D822D7 /* AppDelegate.m in Sources */,
+				00C305062126B7B600D822D7 /* MKMQTTServerDataParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		00C304DB2126B78100D822D7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				00C304DC2126B78100D822D7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		00C304E02126B78100D822D7 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				00C304E12126B78100D822D7 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		00C304E62126B78100D822D7 /* Debug */ = {
@@ -276,6 +372,7 @@
 		};
 		00C304E92126B78100D822D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2C13861CEC6C05163A2615A /* Pods-MokoLifeSDKDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -290,6 +387,7 @@
 		};
 		00C304EA2126B78100D822D7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EC41C4980F38C064C04762E /* Pods-MokoLifeSDKDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
