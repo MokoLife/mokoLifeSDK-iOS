@@ -145,13 +145,11 @@
     }
     [self finishOperation];
     if (self.completeBlock) {
-        self.completeBlock([self getErrorWithMsg:@"Communication timeout"], self.taskID);
+        NSError *error = [[NSError alloc] initWithDomain:@"com.moko.MKMQTTServerSDK"
+                                                    code:-999
+                                                userInfo:@{@"errorInfo":@"Communication timeout"}];
+        self.completeBlock(error, self.taskID);
     }
-}
-
-- (NSError *)getErrorWithMsg:(NSString *)msg{
-    NSError *error = [[NSError alloc] initWithDomain:@"com.moko.operationError" code:-999 userInfo:@{@"errorInfo":msg}];
-    return error;
 }
 
 #pragma mark - setter & getter

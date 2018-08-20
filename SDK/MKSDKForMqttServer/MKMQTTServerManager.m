@@ -19,7 +19,14 @@
 }
 #endif
 
-NSString * const mqttServerCustomErrorDomain = @"com.moko.MKMQTTServerSDK";
+NSString * const MKMqttServerCustomErrorDomain = @"com.moko.MKMQTTServerSDK";
+
+typedef NS_ENUM(NSInteger, serverCustomErrorCode){
+    MKServerDisconnected = -10001,                                    //与服务器断开状态
+    MKServerTopicError = -10002,                                      //发布信息的主题错误
+    MKServerParamsError = -10003,                                     //输入的参数有误
+    MKServerSetParamsError = -10004,                                  //设置参数出错
+};
 
 static MKMQTTServerManager *manager = nil;
 static dispatch_once_t onceToken;
@@ -228,7 +235,7 @@ static dispatch_once_t onceToken;
     if (!data || ![data isKindOfClass:[NSDictionary class]]) {
         if (failedBlock) {
             moko_main_safe(^{
-                failedBlock([self getErrorWithCode:serverParamsError message:@"params error"]);
+                failedBlock([self getErrorWithCode:MKServerParamsError message:@"params error"]);
             })
         }
         return;
@@ -236,7 +243,7 @@ static dispatch_once_t onceToken;
     if (!topic || topic.length == 0) {
         if (failedBlock) {
             moko_main_safe(^{
-                failedBlock([self getErrorWithCode:serverTopicError message:@"the theme of the error to publish information"]);
+                failedBlock([self getErrorWithCode:MKServerTopicError message:@"the theme of the error to publish information"]);
             })
         }
         return;
@@ -244,7 +251,7 @@ static dispatch_once_t onceToken;
     if (!self.sessionManager) {
         if (failedBlock) {
             moko_main_safe(^{
-                failedBlock([self getErrorWithCode:serverDisconnected message:@"please connect server"]);
+                failedBlock([self getErrorWithCode:MKServerDisconnected message:@"please connect server"]);
             })
         }
         return;
@@ -256,7 +263,7 @@ static dispatch_once_t onceToken;
     if (msgid <= 0) {
         if (failedBlock) {
             moko_main_safe(^{
-                failedBlock([self getErrorWithCode:serverSetParamsError message:@"set data error"]);
+                failedBlock([self getErrorWithCode:MKServerSetParamsError message:@"set data error"]);
             })
         }
         return;
@@ -273,7 +280,7 @@ static dispatch_once_t onceToken;
         if (msgid != operationID) {
             if (failedBlock) {
                 moko_main_safe(^{
-                    failedBlock([self getErrorWithCode:serverSetParamsError message:@"set data error"]);
+                    failedBlock([self getErrorWithCode:MKServerSetParamsError message:@"set data error"]);
                 })
             }
             return;
@@ -328,7 +335,7 @@ static dispatch_once_t onceToken;
 }
 
 - (NSError *)getErrorWithCode:(serverCustomErrorCode)code message:(NSString *)message{
-    NSError *error = [[NSError alloc] initWithDomain:mqttServerCustomErrorDomain
+    NSError *error = [[NSError alloc] initWithDomain:MKMqttServerCustomErrorDomain
                                                 code:code
                                             userInfo:@{@"errorInfo":(message == nil ? @"" : message)}];
     return error;
