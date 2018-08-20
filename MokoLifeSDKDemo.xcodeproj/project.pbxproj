@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000C2DD1212A676F00F14A7C /* MKTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 000C2DD0212A676F00F14A7C /* MKTestViewController.m */; };
 		00C304D72126B78100D822D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C304D62126B78100D822D7 /* AppDelegate.m */; };
 		00C304DF2126B78100D822D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00C304DE2126B78100D822D7 /* Assets.xcassets */; };
 		00C304E52126B78100D822D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C304E42126B78100D822D7 /* main.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		000C2DCF212A676F00F14A7C /* MKTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKTestViewController.h; sourceTree = "<group>"; };
+		000C2DD0212A676F00F14A7C /* MKTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKTestViewController.m; sourceTree = "<group>"; };
 		00C304D22126B78100D822D7 /* MokoLifeSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MokoLifeSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00C304D52126B78100D822D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		00C304D62126B78100D822D7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -83,6 +86,8 @@
 				00C304DE2126B78100D822D7 /* Assets.xcassets */,
 				00C304E32126B78100D822D7 /* Info.plist */,
 				00C304E42126B78100D822D7 /* main.m */,
+				000C2DCF212A676F00F14A7C /* MKTestViewController.h */,
+				000C2DD0212A676F00F14A7C /* MKTestViewController.m */,
 			);
 			path = MokoLifeSDKDemo;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 				00C305072126B7B600D822D7 /* MKMQTTServerManager.m in Sources */,
 				00C305082126B7B600D822D7 /* MKMQTTServerTaskOperation.m in Sources */,
 				00C304D72126B78100D822D7 /* AppDelegate.m in Sources */,
+				000C2DD1212A676F00F14A7C /* MKTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,10 +363,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R558LEUW2T;
 				INFOPLIST_FILE = MokoLifeSDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moko.MokoLifeSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -372,10 +379,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R558LEUW2T;
 				INFOPLIST_FILE = MokoLifeSDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moko.MokoLifeSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -172,7 +172,7 @@
                 self.dataBuffer = nil;
                 self.state = MQTTDecoderStateDecodingHeader;
             } else {
-                DDLogWarn(@"[MQTTDecoder] oops received (%lu)=%@...", (unsigned long)self.dataBuffer.length,
+                DDLogError(@"[MQTTDecoder] oops received (%lu)=%@...", (unsigned long)self.dataBuffer.length,
                              [self.dataBuffer subdataWithRange:NSMakeRange(0, MIN(256, self.dataBuffer.length))]);
             }
         }
