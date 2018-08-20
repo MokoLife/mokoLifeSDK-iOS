@@ -14,7 +14,6 @@
 		00C305022126B7B600D822D7 /* MKSocketBlockAdopter.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C304F02126B7B600D822D7 /* MKSocketBlockAdopter.m */; };
 		00C305032126B7B600D822D7 /* MKSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C304F22126B7B600D822D7 /* MKSocketManager.m */; };
 		00C305042126B7B600D822D7 /* MKSocketTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C304F52126B7B600D822D7 /* MKSocketTaskOperation.m */; };
-		00C305052126B7B600D822D7 /* MKMQTTServerBlockAdopter.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C304F92126B7B600D822D7 /* MKMQTTServerBlockAdopter.m */; };
 		00C305072126B7B600D822D7 /* MKMQTTServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C304FE2126B7B600D822D7 /* MKMQTTServerManager.m */; };
 		00C305082126B7B600D822D7 /* MKMQTTServerTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C305002126B7B600D822D7 /* MKMQTTServerTaskOperation.m */; };
 		EAD3B29DE6E4F81A827595FF /* libPods-MokoLifeSDKDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA271F2503626E35D4995289 /* libPods-MokoLifeSDKDemo.a */; };
@@ -36,8 +35,6 @@
 		00C304F32126B7B600D822D7 /* MKSocketTaskDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSocketTaskDefine.h; sourceTree = "<group>"; };
 		00C304F42126B7B600D822D7 /* MKSocketTaskOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSocketTaskOperation.h; sourceTree = "<group>"; };
 		00C304F52126B7B600D822D7 /* MKSocketTaskOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSocketTaskOperation.m; sourceTree = "<group>"; };
-		00C304F82126B7B600D822D7 /* MKMQTTServerBlockAdopter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMQTTServerBlockAdopter.h; sourceTree = "<group>"; };
-		00C304F92126B7B600D822D7 /* MKMQTTServerBlockAdopter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMQTTServerBlockAdopter.m; sourceTree = "<group>"; };
 		00C304FD2126B7B600D822D7 /* MKMQTTServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMQTTServerManager.h; sourceTree = "<group>"; };
 		00C304FE2126B7B600D822D7 /* MKMQTTServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMQTTServerManager.m; sourceTree = "<group>"; };
 		00C304FF2126B7B600D822D7 /* MKMQTTServerTaskOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMQTTServerTaskOperation.h; sourceTree = "<group>"; };
@@ -118,8 +115,6 @@
 		00C304F62126B7B600D822D7 /* MKSDKForMqttServer */ = {
 			isa = PBXGroup;
 			children = (
-				00C304F82126B7B600D822D7 /* MKMQTTServerBlockAdopter.h */,
-				00C304F92126B7B600D822D7 /* MKMQTTServerBlockAdopter.m */,
 				00C304FD2126B7B600D822D7 /* MKMQTTServerManager.h */,
 				00C304FE2126B7B600D822D7 /* MKMQTTServerManager.m */,
 				00C304FF2126B7B600D822D7 /* MKMQTTServerTaskOperation.h */,
@@ -236,7 +231,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00C305052126B7B600D822D7 /* MKMQTTServerBlockAdopter.m in Sources */,
 				00C305022126B7B600D822D7 /* MKSocketBlockAdopter.m in Sources */,
 				00C304E52126B78100D822D7 /* main.m in Sources */,
 				00C305012126B7B600D822D7 /* MKSocketAdopter.m in Sources */,

@@ -7,7 +7,6 @@
 //
 
 #import "MKMQTTServerManager.h"
-#import "MKMQTTServerBlockAdopter.h"
 #import "MKMQTTServerTaskOperation.h"
 #import <MQTTClient/MQTTSessionManager.h>
 
@@ -19,6 +18,8 @@
         dispatch_async(dispatch_get_main_queue(), block);\
 }
 #endif
+
+NSString * const mqttServerCustomErrorDomain = @"com.moko.MKMQTTServerSDK";
 
 static MKMQTTServerManager *manager = nil;
 static dispatch_once_t onceToken;
@@ -225,15 +226,27 @@ static dispatch_once_t onceToken;
         sucBlock:(void (^)(void))sucBlock
      failedBlock:(void (^)(NSError *error))failedBlock{
     if (!data || ![data isKindOfClass:[NSDictionary class]]) {
-        [MKMQTTServerBlockAdopter operationParamsErrorBlock:failedBlock];
+        if (failedBlock) {
+            moko_main_safe(^{
+                failedBlock([self getErrorWithCode:serverParamsError message:@"params error"]);
+            })
+        }
         return;
     }
     if (!topic || topic.length == 0) {
-        [MKMQTTServerBlockAdopter operationTopicErrorBlock:failedBlock];
+        if (failedBlock) {
+            moko_main_safe(^{
+                failedBlock([self getErrorWithCode:serverTopicError message:@"the theme of the error to publish information"]);
+            })
+        }
         return;
     }
     if (!self.sessionManager) {
-        [MKMQTTServerBlockAdopter operationDisConnectedErrorBlock:failedBlock];
+        if (failedBlock) {
+            moko_main_safe(^{
+                failedBlock([self getErrorWithCode:serverDisconnected message:@"please connect server"]);
+            })
+        }
         return;
     }
     UInt16 msgid = [self.sessionManager sendData:[self dataWithJson:data] //要发送的消息体
@@ -241,7 +254,11 @@ static dispatch_once_t onceToken;
                                              qos:MQTTQosLevelExactlyOnce //消息级别
                                           retain:false];
     if (msgid <= 0) {
-        [MKMQTTServerBlockAdopter operationSetDataErrorBlock:failedBlock];
+        if (failedBlock) {
+            moko_main_safe(^{
+                failedBlock([self getErrorWithCode:serverSetParamsError message:@"set data error"]);
+            })
+        }
         return;
     }
     MKMQTTServerTaskOperation *operation = [[MKMQTTServerTaskOperation alloc] initOperationWithID:msgid completeBlock:^(NSError *error, NSInteger operationID) {
@@ -254,7 +271,11 @@ static dispatch_once_t onceToken;
             return ;
         }
         if (msgid != operationID) {
-            [MKMQTTServerBlockAdopter operationSetDataErrorBlock:failedBlock];
+            if (failedBlock) {
+                moko_main_safe(^{
+                    failedBlock([self getErrorWithCode:serverSetParamsError message:@"set data error"]);
+                })
+            }
             return;
         }
         moko_main_safe(^{
@@ -304,6 +325,13 @@ static dispatch_once_t onceToken;
         case MQTTSessionManagerStateConnecting:
             return MKMQTTSessionManagerStateConnecting;
     }
+}
+
+- (NSError *)getErrorWithCode:(serverCustomErrorCode)code message:(NSString *)message{
+    NSError *error = [[NSError alloc] initWithDomain:mqttServerCustomErrorDomain
+                                                code:code
+                                            userInfo:@{@"errorInfo":(message == nil ? @"" : message)}];
+    return error;
 }
 
 #pragma mark - setter & getter
