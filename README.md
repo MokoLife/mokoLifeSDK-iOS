@@ -68,8 +68,8 @@
 When the network is available,call [[MKMQTTServerManager sharedInstance] connectMQTTServer:port:tls:keepalive:clean:auth:user:pass:clientId:] to connect your MQTT server.
 
 #### 2.3 Subscribe topic
-Please refer to the MQTT protocal documention for the topic of the smart plug.Call ```- (void)subscriptions:(NSArray <NSString *>*)topicList``` and ```- (void)unsubscriptions:(NSArray <NSString *>*)topicList``` to subscribe and unsubscribe the topic separatrly.
+Please refer to the MQTT protocal document for the topic of the smart plug.Call ```- (void)subscriptions:(NSArray <NSString *>*)topicList``` and ```- (void)unsubscriptions:(NSArray <NSString *>*)topicList``` to subscribe and unsubscribe the topic separatrly.
 
 #### 2.4 APP publish data to a specified topic
-Please refer to the MQTT protocal documention for the topic of the smart plug.
+Please refer to the MQTT protocal document for the topic of the smart plug.
 ```- (void)sendData:(NSDictionary *)data topic:(NSString *)topic sucBlock:(void (^)(void))sucBlock failedBlock:(void (^)(NSError *error))failedBlock```
