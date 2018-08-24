@@ -2,6 +2,7 @@
 
 #### 1.1 如果需要配置插座的MQTT服务器信息和需要连接的WIFI信息，则首先需要让插座进入AP模式。插座上电的情况下，长按按键10S，这个时候插座黄灯快闪，表明插座进入AP模式(note:设备最多维持3分钟AP模式，配置完成之后也会退出AP模式)。从手机设置->Wi-Fi->进去选择插座AP并且连接(插座AP的SSID以MK开头)，连接成功之后，这个时候调用connectDeviceWithHost:port:connectSucBlock:connectFailedBlock:方法来连接设备.下面是完整的配置插座流程：
 
+##### step1
 ```
 [[MKSocketManager sharedInstance] connectDeviceWithHost:@"192.168.4.1"
                                                    port:8266
@@ -11,6 +12,16 @@
     //connect failed
  }];
 ```
+##### step2
+
+```
+[[MKSocketManager sharedInstance] readSmartPlugDeviceInformationWithSucBlock:^(id returnData) {
+        //Read device info success
+    } failedBlock:^(NSError *error) {
+        //Read device info failed
+    }];
+```
+##### step3
 
 ```
 [[MKSocketManager sharedInstance] configMQTTServerHost:@"your MQTT Server host"
@@ -29,6 +40,7 @@
         //Config Failed
     }];
 ```
+##### step4
 
 ```
 [[MKSocketManager sharedInstance] configWifiSSID:your wifi ssid
@@ -38,14 +50,6 @@
         //Config Success
     } failedBlock:^(NSError *error) {
         //Config Failed
-    }];
-```
-
-```
-[[MKSocketManager sharedInstance] readSmartPlugDeviceInformationWithSucBlock:^(id returnData) {
-        //Read device info success
-    } failedBlock:^(NSError *error) {
-        //Read device info failed
     }];
 ```
 
