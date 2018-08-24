@@ -49,16 +49,18 @@
     }];
 ```
 
-### 2、MKSDKForMqttServer文件夹下面是配置app与mqttServer的SDK，MKMQTTServerDataNotifications.h下面的通知是SDK接收到相关数据之后抛出的通知，在需要接受数据的地方注册相应的通知可以拿到目标数据
+### 2、MKSDKForMqttServer文件夹下面是配置app与mqttServer的SDK
 #### 2.1 MKMQTTServerManagerDelegate
   @protocol MKMQTTServerManagerDelegate <NSObject>
-//connect state delegate method
-- (void)mqttServerManagerStateChanged:(MKMQTTSessionManagerState)state;
-//Receives the data from the MQTT server 
-- (void)sessionManager:(MKMQTTServerManager *)sessionManager didReceiveMessage:(NSData *)data onTopic:(NSString *)topic;
+
+- (void)mqttServerManagerStateChanged:(MKMQTTSessionManagerState)state;//connect state delegate method
+
+- (void)sessionManager:(MKMQTTServerManager *)sessionManager didReceiveMessage:(NSData *)data onTopic:(NSString *)topic;//Receives the data from the MQTT server 
 
 @end
 #### 2.2APP连接MQTT服务器
 在网络可用的情况下，调用[[MKMQTTServerManager sharedInstance] connectMQTTServer:port:tls:keepalive:clean:auth:user:pass:clientId:]连接自己的MQTT服务器。
 #### 2.3订阅主题
 插座交互主题详情请看文档。调用```- (void)subscriptions:(NSArray <NSString *>*)topicList```和```- (void)unsubscriptions:(NSArray <NSString *>*)topicList```分别进行主题的订阅和取消。
+#### 2.4App发布数据到指定主题
+插座交互主题详情请看文档。```- (void)sendData:(NSDictionary *)data topic:(NSString *)topic sucBlock:(void (^)(void))sucBlock failedBlock:(void (^)(NSError *error))failedBlock```
