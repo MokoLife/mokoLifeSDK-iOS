@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "MKSocketSDK"    #存储库名称
-  s.version      = "0.0.3"      #版本号，与tag值一致
+  s.version      = "0.0.9"      #版本号，与tag值一致
   s.summary      = "SDK For Plug"  #简介
   s.description  = "SDK for config smart plug"  #描述
   s.homepage     = "https://github.com/MokoLife/mokoLifeSDK-iOS"      #项目主页，不是git地址

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		000C2DD1212A676F00F14A7C /* MKTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 000C2DD0212A676F00F14A7C /* MKTestViewController.m */; };
 		004F745921E73C26005753E7 /* MKSocketSDK.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 004F745821E73C25005753E7 /* MKSocketSDK.podspec */; };
+		004F745B21E73C8F005753E7 /* MKMqttServerSDK.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 004F745A21E73C8F005753E7 /* MKMqttServerSDK.podspec */; };
 		00C304D72126B78100D822D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C304D62126B78100D822D7 /* AppDelegate.m */; };
 		00C304DF2126B78100D822D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00C304DE2126B78100D822D7 /* Assets.xcassets */; };
 		00C304E52126B78100D822D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C304E42126B78100D822D7 /* main.m */; };
@@ -25,6 +26,7 @@
 		000C2DCF212A676F00F14A7C /* MKTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKTestViewController.h; sourceTree = "<group>"; };
 		000C2DD0212A676F00F14A7C /* MKTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKTestViewController.m; sourceTree = "<group>"; };
 		004F745821E73C25005753E7 /* MKSocketSDK.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MKSocketSDK.podspec; sourceTree = "<group>"; };
+		004F745A21E73C8F005753E7 /* MKMqttServerSDK.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MKMqttServerSDK.podspec; sourceTree = "<group>"; };
 		00C304D22126B78100D822D7 /* MokoLifeSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MokoLifeSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00C304D52126B78100D822D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		00C304D62126B78100D822D7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		00C304C92126B78000D822D7 = {
 			isa = PBXGroup;
 			children = (
+				004F745A21E73C8F005753E7 /* MKMqttServerSDK.podspec */,
 				004F745821E73C25005753E7 /* MKSocketSDK.podspec */,
 				00C304EB2126B7B600D822D7 /* SDK */,
 				00C304D42126B78100D822D7 /* MokoLifeSDKDemo */,
@@ -208,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				004F745921E73C26005753E7 /* MKSocketSDK.podspec in Resources */,
+				004F745B21E73C8F005753E7 /* MKMqttServerSDK.podspec in Resources */,
 				00C304DF2126B78100D822D7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
