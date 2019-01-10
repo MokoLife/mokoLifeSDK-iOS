@@ -7,6 +7,7 @@ typedef NS_ENUM(NSInteger, MKSocketOperationID){
     socketReadDeviceInformationOperation = 1,            //读取设备信息
     socketConfigMQTTServerOperation = 2,                 //配置mqtt服务器信息
     socketConfigWifiOperation = 3,                       //配置plug要连接的wifi
+    socketConfigSensorWorkModeOperation = 4,             //配置传感器跟服务器通信方式
 };
 
 @protocol MKSocketOperationProtocol <NSObject>

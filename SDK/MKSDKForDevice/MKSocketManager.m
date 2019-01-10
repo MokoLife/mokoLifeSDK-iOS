@@ -334,6 +334,20 @@ static NSTimeInterval const defaultCommandTime = 2.f;
                 failedBlock:failedBlock];
 }
 
+- (void)configWorkMode:(smarkSensorWorkMode)workMode
+              sucBlock:(void (^)(id returnData))sucBlock
+           failedBlock:(void (^)(NSError *error))failedBlock{
+    NSDictionary *commandDic = @{
+                                 @"header":@(4003),
+                                 @"mqtt_channel":(workMode == smarkSensorWorkInWIFIMode ? @(1) : @(2)),
+                                 };
+    NSString *jsonString = [MKSocketAdopter convertToJsonData:commandDic];
+    [self addTaskWithTaskID:socketConfigSensorWorkModeOperation
+                 jsonString:jsonString
+                   sucBlock:sucBlock
+                failedBlock:failedBlock];
+}
+
 #pragma mark - connect private method
 - (void)connectHost:(NSString *)host
                port:(NSInteger)port

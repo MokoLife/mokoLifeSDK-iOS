@@ -34,6 +34,11 @@ typedef NS_ENUM(NSInteger, wifiSecurity) {
     wifiSecurity_WPA_WPA2_PSK,
 };
 
+typedef NS_ENUM(NSInteger, smarkSensorWorkMode) {
+    smarkSensorWorkInGPRSMode,              //The sensor communicates with the MQTT server via GPRS
+    smarkSensorWorkInWIFIMode,              //The sensor communicates with the MQTT server via WIFI
+};
+
 @interface MKSocketManager : NSObject
 
 + (MKSocketManager *)sharedInstance;
@@ -106,5 +111,15 @@ typedef NS_ENUM(NSInteger, wifiSecurity) {
               sucBlock:(void (^)(id returnData))sucBlock
            failedBlock:(void (^)(NSError *error))failedBlock;
 
+/**
+ Only the sensor device needs to set the operating mode.
+
+ @param workMode smarkSensorWorkMode
+ @param sucBlock Success callback
+ @param failedBlock Failed callback
+ */
+- (void)configWorkMode:(smarkSensorWorkMode)workMode
+              sucBlock:(void (^)(id returnData))sucBlock
+           failedBlock:(void (^)(NSError *error))failedBlock;
 
 @end
