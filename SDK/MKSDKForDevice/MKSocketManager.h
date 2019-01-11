@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MKSocketTaskOperation.h"
 
 //Device default address
 extern NSString *const defaultHostIpAddress;
@@ -34,14 +35,14 @@ typedef NS_ENUM(NSInteger, wifiSecurity) {
     wifiSecurity_WPA_WPA2_PSK,
 };
 
-typedef NS_ENUM(NSInteger, smarkSensorWorkMode) {
-    smarkSensorWorkInGPRSMode,              //The sensor communicates with the MQTT server via GPRS
-    smarkSensorWorkInWIFIMode,              //The sensor communicates with the MQTT server via WIFI
-};
-
 @interface MKSocketManager : NSObject
 
 + (MKSocketManager *)sharedInstance;
+
+- (void)addTaskWithTaskID:(MKSocketOperationID)taskID
+               jsonString:(NSString *)jsonString
+                 sucBlock:(void (^)(id returnData))sucBlock
+              failedBlock:(void (^)(NSError *error))failedBlock;
 
 /**
  Plug connection
@@ -108,17 +109,6 @@ typedef NS_ENUM(NSInteger, smarkSensorWorkMode) {
 - (void)configWifiSSID:(NSString *)ssid
               password:(NSString *)password
               security:(wifiSecurity)security
-              sucBlock:(void (^)(id returnData))sucBlock
-           failedBlock:(void (^)(NSError *error))failedBlock;
-
-/**
- Only the sensor device needs to set the operating mode.
-
- @param workMode smarkSensorWorkMode
- @param sucBlock Success callback
- @param failedBlock Failed callback
- */
-- (void)configWorkMode:(smarkSensorWorkMode)workMode
               sucBlock:(void (^)(id returnData))sucBlock
            failedBlock:(void (^)(NSError *error))failedBlock;
 

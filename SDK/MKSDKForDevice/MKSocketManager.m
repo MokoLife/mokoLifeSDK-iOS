@@ -10,7 +10,6 @@
 #import <CocoaAsyncSocket/GCDAsyncSocket.h>
 #import "MKSocketBlockAdopter.h"
 #import "MKSocketAdopter.h"
-#import "MKSocketTaskOperation.h"
 
 //设备默认的ip地址
 NSString *const defaultHostIpAddress = @"192.168.4.1";
@@ -329,20 +328,6 @@ static NSTimeInterval const defaultCommandTime = 2.f;
                                  };
     NSString *jsonString = [MKSocketAdopter convertToJsonData:commandDic];
     [self addTaskWithTaskID:socketConfigWifiOperation
-                 jsonString:jsonString
-                   sucBlock:sucBlock
-                failedBlock:failedBlock];
-}
-
-- (void)configWorkMode:(smarkSensorWorkMode)workMode
-              sucBlock:(void (^)(id returnData))sucBlock
-           failedBlock:(void (^)(NSError *error))failedBlock{
-    NSDictionary *commandDic = @{
-                                 @"header":@(4003),
-                                 @"mqtt_channel":(workMode == smarkSensorWorkInWIFIMode ? @(1) : @(2)),
-                                 };
-    NSString *jsonString = [MKSocketAdopter convertToJsonData:commandDic];
-    [self addTaskWithTaskID:socketConfigSensorWorkModeOperation
                  jsonString:jsonString
                    sucBlock:sucBlock
                 failedBlock:failedBlock];
